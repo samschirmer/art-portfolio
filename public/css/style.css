@@ -1,3 +1,7 @@
+html {
+	overflow-y: scroll;
+}
+
 body {
 	margin: 0 auto;
 	max-width: 1240px;
@@ -15,6 +19,7 @@ nav.navbar {
 }
 
 div#headline {
+	text-align: center;
 	margin: 0 auto;
 	width: 70%;
 }
@@ -23,14 +28,27 @@ div#main_container {
 	padding: 5% 0;
 }
 
-/* temp */
-img {
-/*	width: 100%; */
-	border: 1px solid black;
+div#main_container div.row:nth-child(odd) img {
+	height: 800px;
 }
+
+div#main_container div.row:nth-child(even) img {
+	height: 100px;
+}
+
+div.image_container {
+	overflow: hidden;
+}
+
+img.main_image {
+	max-height: 100%;
+	overflow: hidden;
+}
+
+/* temp */
 div.col-md-4 {
-	border: 1px solid red;
+	background-color: #dedede;
 }
 div.col-md-8 {
-	border: 1px solid blue;
+	background-color: #cfcfcf;
 }

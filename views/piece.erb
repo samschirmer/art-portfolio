@@ -1,16 +1,19 @@
-<div class="row">
-	<div class="col-xs-12 col-md-4">
-		<div id="sidebar">
-			<h1><%= @piece.title %></h1>
-			<p><%= @piece.description %></p>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-4">
+			<div id="sidebar">
+				<h1><%= @piece.title %></h1>
+				<h4><%= @piece.subtitle %></h4>
+				<p><%= @piece.description %></p>
+			</div>
 		</div>
-	</div>
-	
-	<div class="col-xs-12 col-md-8">
-		<div id="gallery">
-			<% @piece.images.each do |i| %>
-				<li><img src="<%= i.filename %>" />
-			<% end %>
+		
+		<div class="col-xs-12 col-md-8">
+			<div id="gallery">
+				<% @piece.images.each do |i| %>
+					<li><img src="<%= i.filename %>" />
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
