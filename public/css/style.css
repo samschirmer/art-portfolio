@@ -5,6 +5,7 @@ html {
 body {
 	margin: 0 auto;
 	background: #fff;
+	font-family: 'Cardo', serif;
 }
 
 .container {
@@ -15,6 +16,8 @@ nav.navbar {
 	padding: 20px 0px !important;
 	background-image: none !important;
 	background-color: #fff !important;
+	font-size: 18px;
+	font-family: 'IM Fell English SC', serif;
 }
 
  /* INDEX */
@@ -31,6 +34,7 @@ div#main_container {
 	font-weight: 700;
 	margin-top: 24px;
 	font-size: 28px;
+	font-family: 'Nanum Myeongjo', serif;
 }
 
 .img_subtitle {
@@ -63,8 +67,6 @@ img.main_image {
 		height: 287px;
 	}
 }
-
-
 
 @media (min-width: 992px) {
 	div#main_container div.row:nth-child(odd) div.image_container:first-child {
@@ -106,10 +108,30 @@ div.image_container {
 
 
 /* PIECES */
+div#sidebar h1 {
+	font-weight: 700;
+	font-size: 48px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+div#sidebar h4 {
+	font-size: 22px;
+	font-style: italic;
+}
+div#sidebar p {
+	font-size: 18px;
+	margin: 60px 0;
+}
+
 div#gallery	div.image {
 	margin: auto;
 }
 
 div#gallery	div.image img {
 	width: 100%;
+}
+
+/* MISC */
+textarea {
+	min-width: 400px;
+	min-height: 300px;
 }
