@@ -13,7 +13,6 @@ ActiveRecord::Base.establish_connection(
 class Piece < ActiveRecord::Base
 	has_many :images
 end
-
 class Image < ActiveRecord::Base
 	belongs_to :piece
 end
