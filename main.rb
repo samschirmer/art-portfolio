@@ -37,6 +37,24 @@ get '/contact' do
   erb :contact
 end
 
+post '/contact' do 
+	@name = params['name']
+	erb :thanks
+end
+
+# ADMIN
+get '/admin/edit/:id' do
+	@piece = Piece.find(params['id'])
+	erb :admin
+end
+
+post '/admin/update' do
+	@piece = Piece.find(params['id'])
+	if @piece.update(title: params['title'], subtitle: params['subtitle'], description: params['description'])
+		erb :thanks
+	end
+end
+
 after do
   ActiveRecord::Base.connection.close
 end
