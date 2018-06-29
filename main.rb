@@ -14,7 +14,6 @@ end
 
 get '/pieces/:id' do
 	id = params['id'].split('-')[-1]
-	#@piece = Piece.find(params['id'])
 	@piece = Piece.find(id)
 	erb :piece
 end
@@ -58,8 +57,8 @@ get '/admin/edit/:id' do
 end
 
 post '/admin/update' do
-	@piece = Piece.find(params['id'])
-	if @piece.update(title: params['title'], subtitle: params['subtitle'], description: params['description'])
+	piece = Piece.find(params['id'])
+	if piece.update(title: params['title'], subtitle: params['subtitle'], description: params['description'])
 		erb :thanks
 	end
 end
