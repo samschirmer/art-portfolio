@@ -108,6 +108,10 @@ div.image_container {
 
 
 /* PIECES */
+div#piece_container {
+	margin-top: 6%;
+}
+
 div#sidebar h1 {
 	font-weight: 700;
 	font-size: 48px;
