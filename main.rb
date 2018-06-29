@@ -1,14 +1,3 @@
-require 'sinatra'
-require 'sass'
-require 'sqlite3'
-require 'active_record'
-require 'sinatra/activerecord'
-
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3',
-  :database =>  'db/katelin.sqlite3.db' 
-)
-
 # MODELS
 class Piece < ActiveRecord::Base
 	has_many :images
@@ -24,7 +13,9 @@ get '/' do
 end
 
 get '/pieces/:id' do
-	@piece = Piece.find(params['id'])
+	id = params['id'].split('-')[-1]
+	#@piece = Piece.find(params['id'])
+	@piece = Piece.find(id)
 	erb :piece
 end
 
