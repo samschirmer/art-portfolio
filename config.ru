@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sass'
 require 'sqlite3'
+require 'mail'
 require 'active_record'
 require 'sinatra/activerecord'
 require 'rack-rewrite'

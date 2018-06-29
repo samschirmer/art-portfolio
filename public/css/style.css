@@ -8,6 +8,10 @@ body {
 	font-family: 'Cardo', serif;
 }
 
+hr {
+	margin-bottom: 6%;
+}
+
 .container {
 }
 
@@ -109,7 +113,6 @@ div.image_container {
 
 /* PIECES */
 div#piece_container {
-	margin-top: 6%;
 }
 
 div#sidebar h1 {
@@ -135,7 +138,9 @@ div#gallery	div.image img {
 }
 
 /* MISC */
-textarea {
+input, textarea {
 	min-width: 400px;
+}
+textarea {
 	min-height: 300px;
 }
