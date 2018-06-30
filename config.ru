@@ -1,10 +1,8 @@
 require 'sinatra'
-require 'sass'
 require 'sqlite3'
 require 'mail'
 require 'active_record'
 require 'sinatra/activerecord'
-require 'rack-rewrite'
 require File.expand_path '../main.rb', __FILE__
 
 use Rack::Rewrite do

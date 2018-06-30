@@ -32,7 +32,7 @@ post '/contact' do
 	message = params['message']
 
 	mail = Mail.new do
-	  from     'katelinvhull@gmail.com'
+	  from     'samschirmer@gmail.com'
 	  to       'katelinvhull@gmail.com'
 	  subject  'Someone filled out the form on your website'
 	  body     "New message from <#{name}>#{email}:\n#{message}\n"
