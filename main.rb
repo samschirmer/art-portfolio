@@ -37,12 +37,12 @@ post '/contact' do
 	  subject  'Someone filled out the form on your website'
 	  body     "New message from <#{name}>#{email}:\n#{message}\n"
 	end
-	mail.delivery_method :logger, { 
-#	mail.delivery_method :smtp, { 
-		:address              => "smtp.gmail.com",
+#	mail.delivery_method :logger, { 
+	mail.delivery_method :smtp, { 
+		:address              => 'smtp.gmail.com',
 		:port                 => 587,
-		:user_name            => '<username>',
-		:password             => '<password>',
+		:user_name            => 'username',
+		:password             => 'password',
 		:authentication       => 'plain',
 		:enable_starttls_auto => true  
 	}
