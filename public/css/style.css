@@ -59,7 +59,7 @@ img.main_image {
 		min-width: 100%;
 	}
 	div#main_container div.row:nth-child(even) img {
-		height: 348px;
+		height: 344px;
 		min-width: 100%;
 	}
 }
@@ -73,20 +73,28 @@ img.main_image {
 }
 
 @media (min-width: 992px) {
-	div#main_container div.row:nth-child(odd) div.image_container:first-child {
-		padding-right: 18px;
+	div#main_container div.row:nth-child(1) div.image_container:first-child,
+	div#main_container div.row:nth-child(5) div.image_container:first-child {
+		padding-right: 24px;
 	}
-	div#main_container div.row:nth-child(odd) div.image_container:nth-child(2) {
-		padding-left: 18px;
+	div#main_container div.row:nth-child(1) div.image_container:nth-child(2),
+	div#main_container div.row:nth-child(5) div.image_container:nth-child(2) {
+		padding-left: 12px;
+	}
+	div#main_container div.row:nth-child(3) div.image_container:first-child {
+		padding-right: 12px;
+	}
+	div#main_container div.row:nth-child(3) div.image_container:nth-child(2) {
+		padding-left: 24px;
 	}
 	div#main_container div.row:nth-child(even) div.image_container:first-child {
-		padding-right: 18px;
+		padding-right: 24px;
 	}
 	div#main_container div.row:nth-child(even) div.image_container:nth-child(2) {
-		padding: 0px 18px;
+		padding: 0px 12px;
 	}
 	div#main_container div.row:nth-child(even) div.image_container:nth-child(3) {
-		padding-left: 18px;
+		padding-left: 24px;
 	}
 	div#main_container div.row {
 		padding: 18px 18px;
