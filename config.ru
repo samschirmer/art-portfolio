@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sqlite3'
 require 'mail'
 require 'active_record'
+require 'dotenv/load'
 require 'sinatra/activerecord'
 require File.expand_path '../main.rb', __FILE__
 

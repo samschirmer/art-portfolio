@@ -8,7 +8,7 @@ end
 
 # ROUTING
 get '/' do
-	@pieces = Piece.where(visible: 1, priority: 0)
+	@pieces = Piece.where(visible: 1)
   erb :index
 end
 
@@ -32,8 +32,8 @@ post '/contact' do
 	message = params['message']
 
 	mail = Mail.new do
-	  from     'samschirmer@gmail.com'
-	  to       'katelinvhull@gmail.com'
+	  from     ENV['EMAIL_FROM']
+	  to       ENV['EMAIL_TO']
 	  subject  'Someone filled out the form on your website'
 	  body     "New message from <#{name}>#{email}:\n#{message}\n"
 	end
@@ -41,8 +41,8 @@ post '/contact' do
 	mail.delivery_method :smtp, { 
 		:address              => 'smtp.gmail.com',
 		:port                 => 587,
-		:user_name            => 'username',
-		:password             => 'password',
+		:user_name            => ENV['EMAIL_USERNAME'],
+		:password             => ENV['EMAIL_PASSWORD'],
 		:authentication       => 'plain',
 		:enable_starttls_auto => true  
 	}
