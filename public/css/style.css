@@ -71,6 +71,16 @@ img.main_image {
 		height: 287px;
 	}
 }
+@media (max-width: 576px) {
+	div#main_container div.row:nth-child(odd) img {
+		max-height: 300px;
+	}
+}
+@media (max-width: 500px) {
+	div#main_container div.row:nth-child(odd) img {
+		max-height: 240px;
+	}
+}
 
 @media (min-width: 992px) {
 	div#main_container div.row:nth-child(1) div.image_container:first-child,
