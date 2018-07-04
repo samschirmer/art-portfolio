@@ -6,7 +6,24 @@ class Image < ActiveRecord::Base
 	belongs_to :piece
 end
 
+helpers do
+	def protected!
+	return if authorized?
+		headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
+		halt 401, "Not authorized\n"
+	end
+
+	def authorized?
+		@auth ||=  Rack::Auth::Basic::Request.new(request.env)
+		@auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == [ENV['USERNAME'], ENV['PASSWORD']]
+	end
+end
+
 # ROUTING
+get '/style.css' do
+	scss :"/css/style"
+end
+
 get '/' do
 	@pieces = Piece.where(visible: 1)
   erb :index
@@ -51,15 +68,24 @@ post '/contact' do
 end
 
 # ADMIN
-get '/admin/edit/:id' do
-	@piece = Piece.find(params['id'])
+get '/admin' do
+	protected!
+	@pieces = Piece.all
+	@images = Image.all
 	erb :admin
 end
 
+get '/admin/edit/:id' do
+	protected!
+	@piece = Piece.find(params['id'])
+	erb :edit
+end
+
 post '/admin/update' do
+	protected!
 	piece = Piece.find(params['id'])
-	if piece.update(title: params['title'], subtitle: params['subtitle'], description: params['description'])
-		erb :thanks
+	if piece.update(title: params['title'], subtitle: params['subtitle'], visible: params['visible'], description: params['description'])
+		redirect '/admin'
 	end
 end
 

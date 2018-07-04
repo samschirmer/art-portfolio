@@ -1,17 +1,18 @@
-<form action="/admin/update" method="post">
-	<label>Title</label>
-	<br />
-	<input name="title" value="<%= @piece.title %>" />
-	<br />
-	<label>Subtitle</label>
-	<br />
-	<input name="subtitle" value="<%= @piece.subtitle %>" />
-	<br />
-	<label>Message</label>
-	<br />
-	<textarea name="description"><%= @piece.description %></textarea>
-	<input type="hidden" name="id" value="<%= @piece.id %>" />
-	<br />
-	<button type="submit">Submit</button>
-</form>
+<h1>Pieces</h1>
+<table>
+	<tr>
+		<td>Title</td>
+		<td>Subtitle</td>
+		<td>Actions</td>
+		<td>Visibility</td>
+	</tr>
+<% @pieces.each do |p| %>
+	<tr>
+		<td><%= p.title %></td>
+		<td><%= p.subtitle %></td>
+		<td><a href="/admin/edit/<%= p.id %>">edit</a></td>
+		<td><%= p.visible == 1 ? 'visible' : 'invisible' %></td>
+	</tr>
+<% end %>
+</table>
 

@@ -1,18 +1,13 @@
 html {
 	overflow-y: scroll;
-}
-
-body {
-	margin: 0 auto;
-	background: #fff;
-	font-family: 'Cardo', serif;
-}
-
-hr {
-	margin-bottom: 6%;
-}
-
-.container {
+	body {
+		margin: 0 auto;
+		background: #fff;
+		font-family: 'Cardo', serif;
+	}
+	hr {
+		margin-bottom: 6%;
+	}
 }
 
 nav.navbar {
@@ -31,26 +26,27 @@ div#headline {
 	width: 70%;
 }
 
-div#main_container {
-}
-
-.img_title {
-	font-weight: 700;
-	margin-top: 24px;
-	font-size: 28px;
-	font-family: 'Nanum Myeongjo', serif;
-}
-
-.img_subtitle {
-	font-style: italic;
-	font-size: 22px;
-}
-
 /* IMAGES ON INDEX */
-img.main_image {
-	max-height: 100%;
-	max-width: 100%;
-	margin: auto;
+div#main_container {
+	.img_title {
+		font-weight: 700;
+		margin-top: 24px;
+		font-size: 28px;
+		font-family: 'Nanum Myeongjo', serif;
+	}
+	.img_subtitle {
+		font-style: italic;
+		font-size: 22px;
+	}
+	img.main_image {
+		max-height: 100%;
+		max-width: 100%;
+		margin: auto;
+	}
+	div.image_container {
+		overflow: hidden;
+		padding: 0px;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -81,7 +77,6 @@ img.main_image {
 		max-height: 240px;
 	}
 }
-
 @media (min-width: 992px) {
 	div#main_container div.row:nth-child(1) div.image_container:first-child,
 	div#main_container div.row:nth-child(5) div.image_container:first-child {
@@ -110,57 +105,49 @@ img.main_image {
 		padding: 18px 18px;
 	}
 }
-
-div.image_container {
-	overflow: hidden;
-	padding: 0px;
-}
-
 @media (max-width: 991px) {
 	div.image_container {
 		margin: auto;
 		text-align: center;
 	}	
+/* 
 	div.image_container img {
-/*
 		min-width: 100%;
-*/
 	}
+*/
 }
 
 
 /* PIECES */
 div#piece_container {
+	div#sidebar h1 {
+		font-weight: 700;
+		font-size: 48px;
+		font-family: 'Nanum Myeongjo', serif;
+	}
+	div#sidebar h4 {
+		font-size: 22px;
+		font-style: italic;
+	}
+	div#sidebar p {
+		font-size: 18px;
+		margin: 60px 0;
+	}
+	div#gallery	div.image {
+		margin: auto;
+	}
+	div#gallery	div.image img {
+		width: 100%;
+	}
 }
 
-div#sidebar h1 {
-	font-weight: 700;
-	font-size: 48px;
-	font-family: 'Nanum Myeongjo', serif;
-}
-div#sidebar h4 {
-	font-size: 22px;
-	font-style: italic;
-}
-div#sidebar p {
-	font-size: 18px;
-	margin: 60px 0;
-}
-
-div#gallery	div.image {
-	margin: auto;
-}
-
-div#gallery	div.image img {
-	width: 100%;
-}
 
 /* MISC */
 div#form_container {
 	min-width: 100%;
-}
-form {
-	margin: auto;
+	form {
+		margin: auto;
+	}
 }
 @media (min-width: 992px) {
 	form {
@@ -173,3 +160,15 @@ form {
 		min-height: 300px;
 	}
 }
+
+table {
+	margin: auto;
+	td {
+		padding: 10px;
+	}
+	tr:first-child {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+

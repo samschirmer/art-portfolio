@@ -1,0 +1,24 @@
+<form action="/admin/update" method="post">
+	<label>Title</label>
+	<br />
+	<input class="form-control" name="title" value="<%= @piece.title %>" />
+	<br />
+	<label>Subtitle</label>
+	<br />
+	<input class="form-control" name="subtitle" value="<%= @piece.subtitle %>" />
+	<br />
+	<label>Visbility</label>
+	<br />
+	<select class="form-control" name="visible">
+		<option value="1" <%= 'selected' if @piece.visible == 1 %>>Visible</option>
+		<option value="0" <%= 'selected' if @piece.visible == 0 %>>Invisible</option>
+	</select>
+	<br />
+	<label>Description</label>
+	<br />
+	<textarea class="form-control" name="description"><%= @piece.description %></textarea>
+	<input type="hidden" name="id" value="<%= @piece.id %>" />
+	<br />
+	<button type="submit">Submit</button>
+</form>
+
