@@ -8,7 +8,7 @@ end
 
 # ROUTING
 get '/' do
-	@pieces = Piece.where(visible: 1)
+	@pieces = Piece.where(visible: 1, priority: 0)
   erb :index
 end
 
