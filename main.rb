@@ -1,4 +1,7 @@
 # MODELS
+class Meta < ActiveRecord::Base
+	self.table_name = 'meta'
+end
 class Piece < ActiveRecord::Base
 	has_many :images
 end
@@ -25,8 +28,16 @@ get '/style.css' do
 end
 
 get '/' do
+	@page = Meta.find_by(page: 'work')
 	@pieces = Piece.where(visible: 1)
   erb :index
+end
+post '/work' do
+	protected!
+	work = Meta.find_by(page: 'work')
+	if work.update(content: params['content'], header: params['header'])
+		redirect '/admin'
+	end
 end
 
 get '/pieces/:id' do
@@ -36,7 +47,15 @@ get '/pieces/:id' do
 end
 
 get '/about' do
+	@page = Meta.find_by(page: 'about')
   erb :about
+end
+post '/about' do
+	protected!
+	about = Meta.find_by(page: 'about')
+	if about.update(content: params['content'], header: params['header'])
+		redirect '/admin'
+	end
 end
 
 get '/contact' do
@@ -70,6 +89,8 @@ end
 # ADMIN
 get '/admin' do
 	protected!
+	@about = Meta.find_by(page: 'about')
+	@work = Meta.find_by(page: 'work')
 	@pieces = Piece.all
 	@images = Image.all
 	erb :admin

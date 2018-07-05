@@ -1,4 +1,20 @@
-<h1>Pieces</h1>
+<h2>Work</h2>
+<form action="/work" method="post">
+	<input class="form-control" name="header" value="<%= @work.header %>" />
+	<textarea class="form-control" name="content"><%= @work.content %></textarea>
+	<br />
+	<button type="submit">Submit</button>
+</form>
+
+<h2>About</h2>
+<form action="/about" method="post">
+	<input class="form-control" name="header" value="<%= @about.header %>" />
+	<textarea class="form-control" name="content"><%= @about.content %></textarea>
+	<br />
+	<button type="submit">Submit</button>
+</form>
+
+<h2>Pieces</h2>
 <table>
 	<tr>
 		<td>Title</td>
