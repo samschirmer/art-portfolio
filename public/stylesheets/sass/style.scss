@@ -157,7 +157,7 @@ div#form_container {
 		min-width: 400px;
 	}
 	textarea {
-		min-height: 300px;
+		min-height: 150px;
 	}
 }
 
@@ -172,3 +172,21 @@ table {
 	}
 }
 
+div#admin_container {
+	width: 70%;
+	margin: auto;
+	h2 {
+		text-align: center;
+	}
+	form {
+		margin: 2% auto;
+	}
+	input, textarea {
+		margin: 2% 0;
+	}
+	button {
+		padding: 4px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
