@@ -1,23 +1,36 @@
-<form action="/admin/update" method="post">
-	<label>Title</label>
-	<br />
-	<input class="form-control" name="title" value="<%= @piece.title %>" />
-	<br />
-	<label>Subtitle</label>
-	<br />
-	<input class="form-control" name="subtitle" value="<%= @piece.subtitle %>" />
-	<br />
-	<label>Visbility</label>
-	<br />
-	<select class="form-control" name="visible">
-		<option value="1" <%= 'selected' if @piece.visible == 1 %>>Visible</option>
-		<option value="0" <%= 'selected' if @piece.visible == 0 %>>Invisible</option>
-	</select>
-	<br />
-	<label>Description</label>
-	<br />
-	<textarea class="form-control" name="description"><%= @piece.description %></textarea>
-	<input type="hidden" name="id" value="<%= @piece.id %>" />
-	<br />
-	<button type="submit">Submit</button>
-</form>
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<form action="/admin/update" method="post">
+			<% @piece.images.where('visible = 1 AND priority > 0').order(:priority).each do |i| %>
+				<div>
+					<img style="max-width: 100%;margin: 10px 0px;" src="/images/pieces/<%= @piece.title.gsub("'",'').parameterize + '/' + i.filename %>" />
+					<input type="number" class="form-control" min="1" value="<%= i.priority %>" name="priorities[<%= i.id %>]" />
+				</div>
+				<hr />
+			<% end %>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<label>Title</label>
+			<br />
+			<input class="form-control" name="title" value="<%= @piece.title %>" />
+			<br />
+			<label>Subtitle</label>
+			<br />
+			<input class="form-control" name="subtitle" value="<%= @piece.subtitle %>" />
+			<br />
+			<label>Visbility</label>
+			<br />
+			<select class="form-control" name="visible">
+				<option value="1" <%= 'selected' if @piece.visible == 1 %>>Visible</option>
+				<option value="0" <%= 'selected' if @piece.visible == 0 %>>Invisible</option>
+			</select>
+			<br />
+			<label>Description</label>
+			<br />
+			<textarea class="form-control" name="description"><%= @piece.description %></textarea>
+			<input type="hidden" name="id" value="<%= @piece.id %>" />
+			<br />
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</div>

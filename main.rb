@@ -106,6 +106,10 @@ post '/admin/update' do
 	protected!
 	piece = Piece.find(params['id'])
 	if piece.update(title: params['title'], subtitle: params['subtitle'], visible: params['visible'], description: params['description'])
+		params['priorities'].each do |p|
+			image = Image.find(p[0])		
+			image.update(priority: p[1])
+		end
 		redirect '/admin'
 	end
 end
