@@ -18,7 +18,7 @@ nav.navbar {
 	margin-top: 18px;
 	max-width: 1110px;
 	margin: auto;
-	padding: 38px 0px !important;
+	padding: 38px 0px;
 	background-image: none !important;
 	background-color: #fff !important;
 	font-size: 16px;
@@ -30,6 +30,23 @@ nav.navbar {
 	font-size: 16px;
 	letter-spacing: 2px;
 	font-family: 'IM Fell English SC', serif;
+}
+
+@media (max-width: 1199px) {
+	nav.navbar {
+		padding: 18px 3%;
+	}
+}
+
+@media (max-width: 991px) {
+	nav.navbar {
+		li.nav-item {
+			text-align: right;
+		}
+		li.nav-item:first-child {
+			padding-top: 8px;
+		}
+	}
 }
 
  /* INDEX */
@@ -180,6 +197,11 @@ div#piece_container {
 	}
 }
 
+@media (min-width: 992px) {
+	div#gallery	div.image {
+		margin: 0 auto 36px 24px;
+	}
+}
 
 /* MISC */
 div#form_container {
