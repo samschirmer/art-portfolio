@@ -11,6 +11,8 @@
 /tmp/
 /.sass-cache/
 /db/
+/public/stylesheets/style.css.map
+/public/stylesheets/style.css
 
 # Used by dotenv library to load environment variables.
 .env

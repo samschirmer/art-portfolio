@@ -184,16 +184,10 @@ div#main_container {
 	}
 }
 */
+
 div#piece_container {
 	padding-top: 6%;
 	div#sidebar {
-		h1 {
-			font-weight: 700;
-			font-size: 35px;
-			letter-spacing: 2px;
-			line-height: 45px;
-			font-family: 'Nanum Myeongjo', serif;
-		}
 		h4 {
 			font-family: 'Cardo', serif;
 			font-size: 14px;
@@ -225,6 +219,13 @@ div#piece_container {
 }
 
 /* MISC */
+h1 {
+	font-weight: 700;
+	font-size: 35px;
+	letter-spacing: 2px;
+	line-height: 45px;
+	font-family: 'Nanum Myeongjo', serif;
+}
 div#form_container {
 	padding-top: 6%;
 	min-width: 100%;
