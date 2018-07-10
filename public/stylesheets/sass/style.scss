@@ -7,13 +7,18 @@ html {
 	}
 	hr {
 		margin-bottom: 6%;
-		padding-bottom: 18px;
+	}
+	div#wrapper {
+		padding-top: 120px;
 	}
 }
 
 nav.navbar {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	margin-top: 18px;
-	padding: 20px 0px !important;
+	max-width: 1110px;
+	margin: auto;
+	padding: 38px 0px !important;
 	background-image: none !important;
 	background-color: #fff !important;
 	font-size: 16px;
@@ -136,27 +141,37 @@ div#main_container {
 
 
 /* PIECES */
+@media (min-width: 992px) {
+	div#sidebar {
+		position: fixed;
+		width: 18%;
+	}
+}
 div#piece_container {
-	div#sidebar h1 {
-		font-weight: 700;
-		font-size: 35px;
-		letter-spacing: 2px;
-		line-height: 40px;
-		font-family: 'Nanum Myeongjo', serif;
+	padding-top: 6%;
+	div#sidebar {
+		h1 {
+			font-weight: 700;
+			font-size: 35px;
+			letter-spacing: 2px;
+			line-height: 40px;
+			font-family: 'Nanum Myeongjo', serif;
+		}
+		h4 {
+			font-family: 'Cardo', serif;
+			font-size: 14px;
+			letter-spacing: 1px;
+			font-style: italic;
+		}
+		p {
+			font-family: 'Cardo', serif;
+			font-size: 14px;
+			letter-spacing: .5px;
+			line-height: 2em;
+			margin: 36px 0;
+		}
 	}
-	div#sidebar h4 {
-		font-family: 'Cardo', serif;
-		font-size: 14px;
-		letter-spacing: 1px;
-		font-style: italic;
-	}
-	div#sidebar p {
-		font-family: 'Cardo', serif;
-		font-size: 14px;
-		letter-spacing: .5px;
-		line-height: 2em;
-		margin: 36px 0;
-	}
+
 	div#gallery	div.image {
 		margin: 0 auto 36px auto;
 	}
@@ -168,6 +183,7 @@ div#piece_container {
 
 /* MISC */
 div#form_container {
+	padding-top: 6%;
 	min-width: 100%;
 	form {
 		margin: auto;
@@ -196,7 +212,12 @@ table {
 	}
 }
 
+div#about_container {
+	padding-top: 6%;
+}
+
 div#admin_container {
+	padding-top: 6%;
 	width: 70%;
 	margin: auto;
 	h2 {
