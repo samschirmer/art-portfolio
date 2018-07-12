@@ -164,24 +164,27 @@ div#main_container {
 
 
 /* PIECES */
+/*
 @media (min-width: 992px) {
-	div#sidebar {
-		position: fixed;
-		max-width: 18%;
-	}
-}
-@media (min-width: 1440px) {
-	div#sidebar {
+	div#sidebar.fixed {
 		position: fixed;
 		max-width: 15%;
 	}
 }
-@media (min-width: 1740px) {
-	div#sidebar {
+@media (min-width: 1440px) {
+	div#sidebar.fixed {
+		max-width: 15%;
 		position: fixed;
-		max-width: 13%;
 	}
 }
+@media (min-width: 1740px) {
+	div#sidebar.fixed {
+		max-width: 13%;
+		position: fixed;
+	}
+}
+*/
+
 div#piece_container {
 	padding-top: 6%;
 	div#sidebar {
@@ -247,7 +250,10 @@ button {
 }
 
 /* MISC */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 474a83d8533c094b872b1ff2620bf4882ed8276a
 h1 {
 	font-weight: 700;
 	font-size: 35px;
@@ -255,6 +261,7 @@ h1 {
 	line-height: 45px;
 	font-family: 'Nanum Myeongjo', serif;
 }
+<<<<<<< HEAD
 
 p {
 	font-family: 'Cardo', serif;
@@ -264,6 +271,8 @@ p {
 	margin: 36px 0;
 }
 
+=======
+>>>>>>> 474a83d8533c094b872b1ff2620bf4882ed8276a
 div#form_container {
 	min-width: 100%;
 	form {
@@ -314,4 +323,8 @@ div#admin_container {
 		text-transform: uppercase;
 		font-weight: 700;
 	}
+}
+
+div#footer {
+	padding: 70px;
 }
