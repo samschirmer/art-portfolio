@@ -56,6 +56,23 @@ a.nav-link:hover, li.nav-item.active {
 	}
 }
 
+@media (max-width: 991px) {
+	#footer {
+		p.footer_text {
+			text-align: center;
+		}
+		#social_icons {
+			text-align: center;
+		}
+	}
+}
+@media (min-width: 992px) {
+	#footer {
+		#social_icons {
+			text-align: right;
+		}
+	}
+}
 #footer {
 	border-top: 1px solid #ede2ea;
 	margin-bottom: 18px;
@@ -64,9 +81,6 @@ a.nav-link:hover, li.nav-item.active {
 	padding: 42px 0px;
 	
 	#social_icons {
-		right: 0;
-		vertical-align: middle;
-		text-align: right;
 	}
 
 	p.footer_text {
