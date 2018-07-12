@@ -122,6 +122,12 @@ div#main_container {
 	}
 }
 
+@media (max-width: 991px) {
+	img.main_image {
+		margin-top: 36px !important;
+	}
+}
+
 @media (min-width: 1200px) {
 	div#main_container div.row:nth-child(odd) img {
 		height: 450px;
