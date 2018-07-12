@@ -11,6 +11,8 @@ html {
 	}
 	div#wrapper {
 		padding-top: 120px;
+		padding-bottom: 75px;
+		min-height: 90vh;
 	}
 }
 
@@ -54,6 +56,31 @@ a.nav-link:hover, li.nav-item.active {
 	}
 }
 
+#footer {
+	border-top: 1px solid #ede2ea;
+	margin-bottom: 18px;
+	max-width: 1110px;
+	margin: auto;
+	padding: 42px 0px;
+	
+	#social_icons {
+		right: 0;
+		vertical-align: middle;
+		text-align: right;
+	}
+
+	p.footer_text {
+		margin: 0 auto;
+		font-family: 'IM Fell English SC', serif;
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+
+	img {
+		margin-left: 10px;
+	}
+}
+
  /* INDEX */
 div#headline h1 {
 	text-align: center;
@@ -82,7 +109,8 @@ div#main_container {
 		font-size: 14px;
 		margin-top: 4px;
 		letter-spacing: 1px;
-	}
+		margin-bottom: 0px;;
+	}	
 	img.main_image {
 		max-height: 100%;
 		max-width: 100%;
@@ -250,10 +278,6 @@ button {
 }
 
 /* MISC */
-<<<<<<< HEAD
-
-=======
->>>>>>> 474a83d8533c094b872b1ff2620bf4882ed8276a
 h1 {
 	font-weight: 700;
 	font-size: 35px;
@@ -261,7 +285,6 @@ h1 {
 	line-height: 45px;
 	font-family: 'Nanum Myeongjo', serif;
 }
-<<<<<<< HEAD
 
 p {
 	font-family: 'Cardo', serif;
@@ -271,8 +294,6 @@ p {
 	margin: 36px 0;
 }
 
-=======
->>>>>>> 474a83d8533c094b872b1ff2620bf4882ed8276a
 div#form_container {
 	min-width: 100%;
 	form {
@@ -303,7 +324,7 @@ table {
 }
 
 div#about_container, div#contact_container {
-	padding-top: 6%;
+	padding-top: 65px;
 }
 
 div#admin_container {
@@ -325,6 +346,16 @@ div#admin_container {
 	}
 }
 
-div#footer {
-	padding: 70px;
+a:link {
+	color: #c0a4b7;
+	text-decoration: none;
+	font-weight: 100;
+}
+
+a:hover {
+	color: #e0cc00;
+}
+
+a:visited {
+	color: #c0a4b7;
 }

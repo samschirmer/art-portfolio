@@ -6,7 +6,7 @@
 	<div class="row">
 <% @pieces.each_with_index do |p, index| %>
 	<% case index
-		when 1, 11 %>
+		when 1 %>
 				<div class="col-xs-12 col-lg-8 image_container">
 					<a href="/pieces/<%= p.title.gsub("'",'').parameterize %>-<%= p.id %>"><img class="main_image img img-fluid" src="/images/thumbs/<%= p.images.find_by(priority: 0).filename %>" /></a>
 				  <h3 class="img_title"><%= p.title %></h3>
@@ -44,6 +44,13 @@
 				  <h3 class="img_title"><%= p.title %></h3>
 				  <p class="img_subtitle"><%= p.subtitle %></p>
 				</div>
+	<% when 11 %>
+			<div class="col-xs-12 col-lg-8 image_container">
+				<a href="/pieces/<%= p.title.gsub("'",'').parameterize %>-<%= p.id %>"><img class="main_image img img-fluid" src="/images/thumbs/<%= p.images.find_by(priority: 0).filename %>" /></a>
+			  <h3 class="img_title"><%= p.title %></h3>
+			  <p class="img_subtitle"><%= p.subtitle %></p>
+			</div>
+		</div>
 	<% end %>
 <% end %>
 </div>
