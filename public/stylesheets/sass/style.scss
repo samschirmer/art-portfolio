@@ -15,7 +15,7 @@ html {
 }
 
 nav.navbar {
-	border-bottom: 1px solid #e9e6f1;
+	border-bottom: 1px solid #ede2ea;
 	margin-top: 18px;
 	max-width: 1110px;
 	margin: auto;
@@ -34,7 +34,7 @@ nav.navbar {
 }
 
 a.nav-link:hover, li.nav-item.active {
-	color:#beabd8 !important;
+	color:#c0a4b7 !important;
 }
 
 @media (max-width: 1199px) {
@@ -185,13 +185,6 @@ div#main_container {
 div#piece_container {
 	padding-top: 6%;
 	div#sidebar {
-		h1 {
-			font-weight: 700;
-			font-size: 35px;
-			letter-spacing: 2px;
-			line-height: 45px;
-			font-family: 'Nanum Myeongjo', serif;
-		}
 		h4 {
 			font-family: 'Cardo', serif;
 			font-size: 14px;
@@ -222,9 +215,56 @@ div#piece_container {
 	}
 }
 
+/* ABOUT */
+
+
+
+/* FORM */
+
+#form_container{
+	font-family: 'Cardo', serif;
+	font-size: 14px;
+	letter-spacing: .5px;
+	margin: 36px 0;	
+}
+
+.form-control {
+	background-color: #ede2ea;
+	border: 0;
+	border-radius: 0%;
+}
+
+button {
+    background-color: #464646;
+	border: none;
+	font-family: 'IM Fell English SC', serif;
+	letter-spacing: 2px;
+	font-size: 16px;
+    color: white;
+    padding: 7px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* MISC */
+
+h1 {
+	font-weight: 700;
+	font-size: 35px;
+	letter-spacing: 2px;
+	line-height: 45px;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+p {
+	font-family: 'Cardo', serif;
+	font-size: 14px;
+	letter-spacing: .5px;
+	line-height: 2em;
+	margin: 36px 0;
+}
+
 div#form_container {
-	padding-top: 6%;
 	min-width: 100%;
 	form {
 		margin: auto;
@@ -232,7 +272,7 @@ div#form_container {
 }
 @media (min-width: 992px) {
 	form {
-		max-width: 50%;
+		min-width: 100%;
 	}
 	input, textarea {
 		min-width: 400px;
@@ -253,12 +293,11 @@ table {
 	}
 }
 
-div#about_container {
+div#about_container, div#contact_container {
 	padding-top: 6%;
 }
 
 div#admin_container {
-	padding-top: 6%;
 	width: 70%;
 	margin: auto;
 	h2 {
