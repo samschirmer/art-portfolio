@@ -99,6 +99,35 @@ get '/admin' do
 	erb :admin
 end
 
+get '/admin/new' do
+	protected!
+	erb :new
+end
+
+post '/admin/create' do 
+	protected!
+	piece = Piece.new
+	piece.title = params['title']	
+	piece.subtitle = params['subtitle']	
+	piece.description = params['description']	
+	piece.visible = false	
+	piece.save
+	img_list = params['image_names'] 
+	images = img_list.split(',')
+	images.map! {|i| i.strip}
+	pp images
+	images.each_with_index do |img, i|
+		image = Image.new
+		image.priority = i + 1
+		image.filename = img
+		image.piece_id = piece.id
+		image.visible = true
+		pp image
+		image.save
+	end
+	redirect '/admin'
+end
+
 get '/admin/edit/:id' do
 	protected!
 	@piece = Piece.find(params['id'])

@@ -1,0 +1,26 @@
+<div id="admin_container">
+<div class="row">
+	<div class="col-xs-12">
+		<form action="/admin/create" method="post">
+		<div class="col-xs-12">
+			<label>Title</label>
+			<br />
+			<input class="form-control" name="title" />
+			<br />
+			<label>Subtitle</label>
+			<br />
+			<input class="form-control" name="subtitle" />
+			<br />
+			<label>Description</label>
+			<br />
+			<textarea class="form-control" name="description">&lt;p&gt;&lt;/p&gt;</textarea>
+			<br />
+			<label>Enter filenames of images (comma separated)</label>
+			<br />
+			<textarea class="form-control" name="image_names">one.png, two.png, three.png</textarea>
+			<p>Reminder: upload images via git commit under public/images/pieces/slugified-piece-title</p>
+			<button type="submit">Create</button>
+		</form>
+	</div>
+</div>
+</div>
