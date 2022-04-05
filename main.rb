@@ -66,6 +66,9 @@ post '/contact' do
 	name = params['name']
 	email = params['email']
 	message = params['message']
+	human = params['human']
+
+	return erb :thanks if human.downcase != 'katelin'
 
 	mail = Mail.new do
 	  from     ENV['EMAIL_FROM']
