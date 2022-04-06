@@ -29,7 +29,7 @@ end
 
 get '/' do
 	@page = Meta.find_by(page: 'work')
-	@pieces = Piece.where(visible: 1)
+	@pieces = Piece.where(visible: 1).order('pieces.index_order')
   erb :index
 end
 post '/work' do

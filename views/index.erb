@@ -4,9 +4,9 @@
 
 <div id="main_container">
 	<div class="row">
-<% @pieces.each_with_index do |p, index| %>
-	<% case index
-		when 1 %>
+<% @pieces.each do |p| %>
+	<% case p.index_order
+		when 1 # ends first row at 2 images %>
 				<div class="col-xs-12 col-lg-8 image_container">
 					<a href="/pieces/<%= p.title.gsub("'",'').parameterize %>-<%= p.id %>"><img class="main_image img img-fluid" src="/images/thumbs/<%= p.images.find_by(priority: 0).filename %>" /></a>
 				  <h3 class="img_title"><%= p.title %></h3>
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 			<div class="row">
-	<% when 0, 2..4, 7..9 # rows of three %>
+	<% when 0, 2..4, 7..9, 12..14 # rows of three %>
 			<div class="col-xs-12 col-lg-4 image_container">
 					<a href="/pieces/<%= p.title.gsub("'",'').parameterize %>-<%= p.id %>"><img class="main_image img img-fluid" src="/images/thumbs/<%= p.images.find_by(priority: 0).filename %>" /></a>
 				  <h3 class="img_title"><%= p.title %></h3>
@@ -51,6 +51,7 @@
 			  <p class="img_subtitle"><%= p.subtitle %></p>
 			</div>
 		</div>
+		<div class="row">
 	<% end %>
 <% end %>
 </div>
